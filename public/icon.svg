@@ -1,0 +1,35 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 电池主体 -->
+  <rect x="4" y="8" width="20" height="12" rx="2" ry="2" 
+        fill="none" stroke="#3B82F6" stroke-width="2"/>
+  
+  <!-- 电池正极 -->
+  <rect x="24" y="12" width="2" height="4" rx="1" ry="1" 
+        fill="#3B82F6"/>
+  
+  <!-- 电池电量填充 -->
+  <rect x="5.5" y="9.5" width="13" height="9" rx="1" ry="1" 
+        fill="url(#batteryGradient)"/>
+  
+  <!-- 闪电图标（充电状态） -->
+  <path d="M14 6L10 12H13L11 18L15 12H12L14 6Z" 
+        fill="#10B981" opacity="0.8"/>
+  
+  <!-- 渐变定义 -->
+  <defs>
+    <!-- 电池电量渐变 -->
+    <linearGradient id="batteryGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#10B981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- 发光效果 -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+</svg>

@@ -1,0 +1,44 @@
+<svg width="192" height="192" viewBox="0 0 192 192" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景圆形 -->
+  <circle cx="96" cy="96" r="96" fill="url(#bgGradient)"/>
+  
+  <!-- 电池主体 -->
+  <rect x="48" y="72" width="96" height="48" rx="8" ry="8" 
+        fill="none" stroke="#ffffff" stroke-width="4"/>
+  
+  <!-- 电池正极 -->
+  <rect x="144" y="88" width="8" height="16" rx="4" ry="4" 
+        fill="#ffffff"/>
+  
+  <!-- 电池电量填充 -->
+  <rect x="52" y="76" width="72" height="40" rx="4" ry="4" 
+        fill="url(#batteryGradient)"/>
+  
+  <!-- 闪电图标（充电状态） -->
+  <path d="M96 48L80 72H88L84 96L100 72H92L96 48Z" 
+        fill="#10B981" filter="url(#glow)"/>
+  
+  <!-- 渐变定义 -->
+  <defs>
+    <!-- 背景渐变 -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E40AF;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- 电池电量渐变 -->
+    <linearGradient id="batteryGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#10B981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- 发光效果 -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+</svg>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>Battery Level Monitor</title>
+    <meta name="description" content="实时电池状态监控工具 - 基于 Web Battery API" />
+    
+    <!-- PWA 清单 -->
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- iOS Safari 支持 -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Battery Monitor" />
+    <link rel="apple-touch-icon" href="/icon-192.svg" />
+    
+    <!-- Android Chrome 支持 -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#3b82f6" />
+    
+    <!-- Windows 支持 -->
+    <meta name="msapplication-TileColor" content="#3b82f6" />
+    <meta name="msapplication-TileImage" content="/icon-192.svg" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- PWA Service Worker 注册 -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('PWA: Service Worker 注册成功', registration);
+            })
+            .catch((error) => {
+              console.log('PWA: Service Worker 注册失败', error);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>
