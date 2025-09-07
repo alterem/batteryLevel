@@ -30,14 +30,14 @@
   ],
   "screenshots": [
     {
-      "src": "/docs/light-mode.png",
+      "src": "https://github.com/alterem/batteryLevel/raw/main/docs/light-mode.png",
       "sizes": "800x600",
       "type": "image/png",
       "form_factor": "wide",
       "label": "亮色模式界面"
     },
     {
-      "src": "/docs/dark-mode.png",
+      "src": "https://github.com/alterem/batteryLevel/raw/main/docs/dark-mode.png",
       "sizes": "800x600",
       "type": "image/png",
       "form_factor": "wide",
